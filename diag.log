@@ -1,0 +1,55 @@
+=== ps ===
+NAME         IMAGE           COMMAND                  SERVICE   CREATED              STATUS                         PORTS
+armweb_sim   armweb:latest   "/ros_entrypoint.sh …"   sim       About a minute ago   Restarting (1) 8 seconds ago   
+=== errors only ===
+armweb_sim  | [INFO] [launch]: Default logging verbosity is set to INFO
+armweb_sim  | [INFO] [python3-1]: process started with pid [30]
+armweb_sim  | [python3-1] [export_usd] wrote /ws/data/usd/arm.usda
+armweb_sim  | [python3-1] [export_usd] robot=demo_arm joints=7 prims=54
+armweb_sim  | [INFO] [python3-1]: process has finished cleanly [pid 30]
+armweb_sim  | [ERROR] [launch]: Caught exception in launch (see debug for traceback): package 'armweb_sim' found at '/ws/install/armweb_sim', but libexec directory '/ws/install/armweb_sim/lib/armweb_sim' does not exist
+armweb_sim  | _ament_prefix_sh_source_script() {
+armweb_sim  |     if [ -f "$1" ]; then
+armweb_sim  |       if [ -n "$AMENT_TRACE_SETUP_FILES" ]; then
+armweb_sim  |         echo "# . \"$1\""
+armweb_sim  |       fi
+armweb_sim  |       . "$1"
+armweb_sim  |     else
+armweb_sim  |       echo "not found: \"$1\"" 1>&2
+armweb_sim  |     fi
+armweb_sim  |   }
+armweb_sim  | AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash"
+armweb_sim  | AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh"
+armweb_sim  | export ROS_DISTRO="humble"
+armweb_sim  | export ROS_PYTHON_VERSION="3"
+armweb_sim  | export ROS_VERSION="2"
+armweb_sim  | AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash"
+armweb_sim  | unset _ament_prefix_sh_source_script
+armweb_sim  | wrote /ws/assets/urdf/demo_arm.urdf
+armweb_sim  | [entrypoint] using prebuilt workspace
+armweb_sim  | _ament_prefix_sh_source_script() {
+armweb_sim  |     if [ -f "$1" ]; then
+armweb_sim  |       if [ -n "$AMENT_TRACE_SETUP_FILES" ]; then
+armweb_sim  |         echo "# . \"$1\""
+armweb_sim  |       fi
+armweb_sim  |       . "$1"
+armweb_sim  |     else
+armweb_sim  |       echo "not found: \"$1\"" 1>&2
+armweb_sim  |     fi
+armweb_sim  |   }
+armweb_sim  | AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros2cli/environment/ros2-argcomplete.bash"
+armweb_sim  | AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/ros_environment/environment/0.ros_distro_check.sh"
+armweb_sim  | export ROS_DISTRO="humble"
+armweb_sim  | export ROS_PYTHON_VERSION="3"
+armweb_sim  | export ROS_VERSION="2"
+armweb_sim  | AMENT_CURRENT_PREFIX="/opt/ros/humble" _ament_prefix_sh_source_script "/opt/ros/humble/share/rosidl_cli/environment/rosidl-argcomplete.bash"
+armweb_sim  | unset _ament_prefix_sh_source_script
+armweb_sim  | [entrypoint] launching armweb sim (ARM=demo)
+armweb_sim  | [INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-03-17-23-38-895905-armweb-sim-1
+armweb_sim  | [INFO] [launch]: Default logging verbosity is set to INFO
+armweb_sim  | [INFO] [python3-1]: process started with pid [30]
+armweb_sim  | [python3-1] [export_usd] wrote /ws/data/usd/arm.usda
+armweb_sim  | [python3-1] [export_usd] robot=demo_arm joints=7 prims=54
+armweb_sim  | [INFO] [python3-1]: process has finished cleanly [pid 30]
+armweb_sim  | [ERROR] [launch]: Caught exception in launch (see debug for traceback): package 'armweb_sim' found at '/ws/install/armweb_sim', but libexec directory '/ws/install/armweb_sim/lib/armweb_sim' does not exist
+=== DONE ===

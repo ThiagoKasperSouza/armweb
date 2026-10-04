@@ -1,0 +1,3 @@
+[console_scripts]
+arm_sim_node = armweb_sim.arm_sim_node:main
+

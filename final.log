@@ -1,0 +1,27 @@
+=== container ===
+armweb_sim  Up 3 minutes (healthy)
+
+=== which robot is loaded ===
+armweb_sim  | [python3-3] arm_sim: 13 joints from robot.urdf
+
+=== glTF exports ===
+arm_animated.glb           OK: hierarchy, orientation and animation all valid
+arm_posed.glb              OK: hierarchy, orientation and animation all valid
+arm_rest.glb               OK: hierarchy, orientation and animation all valid
+fr3_animated.glb           OK: hierarchy, orientation and animation all valid
+fr3_rest.glb               OK: hierarchy, orientation and animation all valid
+
+=== file sizes ===
+total 10412
+drwxr-xr-x 2 thiag thiag    4096 Oct  3 17:08 .
+drwxr-xr-x 4 thiag thiag    4096 Oct  3 14:52 ..
+-rw-r--r-- 1 thiag thiag   29572 Oct  3 15:37 arm_animated.glb
+-rw-r--r-- 1 thiag thiag   21568 Oct  3 15:37 arm_posed.glb
+-rw-r--r-- 1 thiag thiag   21412 Oct  3 15:37 arm_rest.glb
+-rw-r--r-- 1 thiag thiag 5290004 Oct  3 17:13 fr3_animated.glb
+-rw-r--r-- 1 thiag thiag 5275656 Oct  3 17:13 fr3_rest.glb
+
+=== static USD with real meshes ===
+[export_usd] wrote /ws/data/usd/robot.usda
+[export_usd] robot=fr3 joints=13 prims=49
+=== DONE ===

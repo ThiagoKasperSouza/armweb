@@ -1,0 +1,942 @@
+#usda 1.0
+(
+    "Recorded from /joint_states (URDF: /ws/assets/urdf/demo_arm.urdf) at 20.0 Hz"
+    defaultPrim = "arm"
+    framesPerSecond = 20
+    metersPerUnit = 1
+    startTimeCode = 0
+    timeCodesPerSecond = 20
+    upAxis = "Z"
+)
+
+def Xform "arm"
+{
+    def Xform "base_link"
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0.05)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+
+        def Cube "geom"
+        {
+            double size = 1
+            float3 xformOp:scale = (0.3, 0.3, 0.1)
+            uniform token[] xformOpOrder = ["xformOp:scale"]
+
+            def Shader "surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                float inputs:metallic = 0
+                float inputs:opacity = 1
+                float inputs:roughness = 0.45
+                token outputs:surface
+            }
+
+            def Material "material"
+            {
+                token outputs:surface.connect = </arm/base_link/geom/surface.outputs:surface>
+            }
+        }
+
+        def Xform "joint_shoulder_pan_joint" (
+            "joint=shoulder_pan_joint type=revolute axis=[0.0, 0.0, 1.0]"
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            quatf xformOp:orient.timeSamples = {
+                0: (1, 0, 0, 0),
+                1: (1, 0, 0, 0),
+                2: (1, 0, 0, 0),
+                3: (1, 0, 0, 0),
+                4: (1, 0, 0, 0),
+                5: (1, 0, 0, 0),
+                6: (1, 0, 0, 0),
+                7: (1, 0, 0, 0),
+                8: (1, 0, 0, 0),
+                9: (1, 0, 0, 0),
+                10: (1, 0, 0, 0),
+                11: (1, 0, 0, 0),
+                12: (1, 0, 0, 0),
+                13: (1, 0, 0, 0),
+                14: (1, 0, 0, 0),
+                15: (1, 0, 0, 0),
+                16: (1, 0, 0, 0),
+                17: (1, 0, 0, 0),
+                18: (1, 0, 0, 0),
+                19: (1, 0, 0, 0),
+                20: (1, 0, 0, 0),
+                21: (1, 0, 0, 0),
+                22: (1, 0, 0, 0),
+                23: (1, 0, 0, 0),
+                24: (1, 0, 0, 0),
+                25: (1, 0, 0, 0),
+                26: (1, 0, 0, 0),
+                27: (1, 0, 0, 0),
+                28: (1, 0, 0, 0),
+                29: (1, 0, 0, 0),
+                30: (1, 0, 0, 0),
+                31: (1, 0, 0, 0),
+                32: (1, 0, 0, 0),
+                33: (1, 0, 0, 0),
+                34: (1, 0, 0, 0),
+                35: (1, 0, 0, 0),
+                36: (1, 0, 0, 0),
+                37: (1, 0, 0, 0),
+                38: (1, 0, 0, 0),
+                39: (1, 0, 0, 0),
+                40: (1, 0, 0, 0),
+                41: (1, 0, 0, 0),
+                42: (1, 0, 0, 0),
+                43: (1, 0, 0, 0),
+                44: (1, 0, 0, 0),
+                45: (1, 0, 0, 0),
+                46: (1, 0, 0, 0),
+                47: (1, 0, 0, 0),
+                48: (1, 0, 0, 0),
+                49: (1, 0, 0, 0),
+                50: (1, 0, 0, 0),
+                51: (1, 0, 0, 0),
+                52: (1, 0, 0, 0),
+                53: (1, 0, 0, 0),
+                54: (1, 0, 0, 0),
+                55: (1, 0, 0, 0),
+                56: (1, 0, 0, 0),
+                57: (1, 0, 0, 0),
+                58: (1, 0, 0, 0),
+                59: (1, 0, 0, 0),
+                60: (1, 0, 0, 0),
+                61: (1, 0, 0, 0),
+                62: (1, 0, 0, 0),
+                63: (1, 0, 0, 0),
+                64: (1, 0, 0, 0),
+                65: (1, 0, 0, 0),
+                66: (1, 0, 0, 0),
+                67: (1, 0, 0, 0),
+                68: (1, 0, 0, 0),
+                69: (1, 0, 0, 0),
+                70: (1, 0, 0, 0),
+                71: (1, 0, 0, 0),
+                72: (1, 0, 0, 0),
+                73: (1, 0, 0, 0),
+                74: (1, 0, 0, 0),
+                75: (1, 0, 0, 0),
+                76: (1, 0, 0, 0),
+                77: (1, 0, 0, 0),
+                78: (1, 0, 0, 0),
+                79: (1, 0, 0, 0),
+                80: (1, 0, 0, 0),
+                81: (1, 0, 0, 0),
+                82: (1, 0, 0, 0),
+                83: (1, 0, 0, 0),
+                84: (1, 0, 0, 0),
+                85: (1, 0, 0, 0),
+                86: (1, 0, 0, 0),
+            }
+            uniform token[] xformOpOrder = ["xformOp:orient"]
+
+            def Xform "shoulder_link"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.06)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+
+                def Cylinder "geom"
+                {
+                    uniform token axis = "Z"
+                    double height = 0.12
+                    double radius = 0.055
+
+                    def Shader "surface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (0.9, 0.45, 0.1)
+                        float inputs:metallic = 0
+                        float inputs:opacity = 1
+                        float inputs:roughness = 0.45
+                        token outputs:surface
+                    }
+
+                    def Material "material"
+                    {
+                        token outputs:surface.connect = </arm/base_link/joint_shoulder_pan_joint/shoulder_link/geom/surface.outputs:surface>
+                    }
+                }
+            }
+        }
+    }
+
+    def "shoulder_link"
+    {
+        def Xform "joint_elbow_pitch_joint" (
+            "joint=elbow_pitch_joint type=revolute axis=[0.0, 1.0, 0.0]"
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            quatf xformOp:orient.timeSamples = {
+                0: (1, 0, 0, 0),
+                1: (1, 0, 0, 0),
+                2: (1, 0, 0, 0),
+                3: (1, 0, 0, 0),
+                4: (1, 0, 0, 0),
+                5: (1, 0, 0, 0),
+                6: (1, 0, 0, 0),
+                7: (1, 0, 0, 0),
+                8: (1, 0, 0, 0),
+                9: (1, 0, 0, 0),
+                10: (1, 0, 0, 0),
+                11: (1, 0, 0, 0),
+                12: (1, 0, 0, 0),
+                13: (1, 0, 0, 0),
+                14: (1, 0, 0, 0),
+                15: (1, 0, 0, 0),
+                16: (1, 0, 0, 0),
+                17: (1, 0, 0, 0),
+                18: (1, 0, 0, 0),
+                19: (1, 0, 0, 0),
+                20: (1, 0, 0, 0),
+                21: (1, 0, 0, 0),
+                22: (1, 0, 0, 0),
+                23: (1, 0, 0, 0),
+                24: (1, 0, 0, 0),
+                25: (1, 0, 0, 0),
+                26: (1, 0, 0, 0),
+                27: (1, 0, 0, 0),
+                28: (1, 0, 0, 0),
+                29: (1, 0, 0, 0),
+                30: (1, 0, 0, 0),
+                31: (1, 0, 0, 0),
+                32: (1, 0, 0, 0),
+                33: (1, 0, 0, 0),
+                34: (1, 0, 0, 0),
+                35: (1, 0, 0, 0),
+                36: (1, 0, 0, 0),
+                37: (1, 0, 0, 0),
+                38: (1, 0, 0, 0),
+                39: (1, 0, 0, 0),
+                40: (1, 0, 0, 0),
+                41: (1, 0, 0, 0),
+                42: (1, 0, 0, 0),
+                43: (1, 0, 0, 0),
+                44: (1, 0, 0, 0),
+                45: (1, 0, 0, 0),
+                46: (1, 0, 0, 0),
+                47: (1, 0, 0, 0),
+                48: (1, 0, 0, 0),
+                49: (1, 0, 0, 0),
+                50: (1, 0, 0, 0),
+                51: (1, 0, 0, 0),
+                52: (1, 0, 0, 0),
+                53: (1, 0, 0, 0),
+                54: (1, 0, 0, 0),
+                55: (1, 0, 0, 0),
+                56: (1, 0, 0, 0),
+                57: (1, 0, 0, 0),
+                58: (1, 0, 0, 0),
+                59: (1, 0, 0, 0),
+                60: (1, 0, 0, 0),
+                61: (1, 0, 0, 0),
+                62: (1, 0, 0, 0),
+                63: (1, 0, 0, 0),
+                64: (1, 0, 0, 0),
+                65: (1, 0, 0, 0),
+                66: (1, 0, 0, 0),
+                67: (1, 0, 0, 0),
+                68: (1, 0, 0, 0),
+                69: (1, 0, 0, 0),
+                70: (1, 0, 0, 0),
+                71: (1, 0, 0, 0),
+                72: (1, 0, 0, 0),
+                73: (1, 0, 0, 0),
+                74: (1, 0, 0, 0),
+                75: (1, 0, 0, 0),
+                76: (1, 0, 0, 0),
+                77: (1, 0, 0, 0),
+                78: (1, 0, 0, 0),
+                79: (1, 0, 0, 0),
+                80: (1, 0, 0, 0),
+                81: (1, 0, 0, 0),
+                82: (1, 0, 0, 0),
+                83: (1, 0, 0, 0),
+                84: (1, 0, 0, 0),
+                85: (1, 0, 0, 0),
+                86: (1, 0, 0, 0),
+            }
+            uniform token[] xformOpOrder = ["xformOp:orient"]
+
+            def Xform "upper_arm_link"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.15)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+
+                def Cube "geom"
+                {
+                    double size = 1
+                    float3 xformOp:scale = (0.06, 0.06, 0.3)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+
+                    def Shader "surface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (0.9, 0.45, 0.1)
+                        float inputs:metallic = 0
+                        float inputs:opacity = 1
+                        float inputs:roughness = 0.45
+                        token outputs:surface
+                    }
+
+                    def Material "material"
+                    {
+                        token outputs:surface.connect = </arm/shoulder_link/joint_elbow_pitch_joint/upper_arm_link/geom/surface.outputs:surface>
+                    }
+                }
+            }
+        }
+    }
+
+    def "upper_arm_link"
+    {
+        def Xform "joint_forearm_roll_joint" (
+            "joint=forearm_roll_joint type=revolute axis=[0.0, 0.0, 1.0]"
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            quatf xformOp:orient.timeSamples = {
+                0: (1, 0, 0, 0),
+                1: (1, 0, 0, 0),
+                2: (1, 0, 0, 0),
+                3: (1, 0, 0, 0),
+                4: (1, 0, 0, 0),
+                5: (1, 0, 0, 0),
+                6: (1, 0, 0, 0),
+                7: (1, 0, 0, 0),
+                8: (1, 0, 0, 0),
+                9: (1, 0, 0, 0),
+                10: (1, 0, 0, 0),
+                11: (1, 0, 0, 0),
+                12: (1, 0, 0, 0),
+                13: (1, 0, 0, 0),
+                14: (1, 0, 0, 0),
+                15: (1, 0, 0, 0),
+                16: (1, 0, 0, 0),
+                17: (1, 0, 0, 0),
+                18: (1, 0, 0, 0),
+                19: (1, 0, 0, 0),
+                20: (1, 0, 0, 0),
+                21: (1, 0, 0, 0),
+                22: (1, 0, 0, 0),
+                23: (1, 0, 0, 0),
+                24: (1, 0, 0, 0),
+                25: (1, 0, 0, 0),
+                26: (1, 0, 0, 0),
+                27: (1, 0, 0, 0),
+                28: (1, 0, 0, 0),
+                29: (1, 0, 0, 0),
+                30: (1, 0, 0, 0),
+                31: (1, 0, 0, 0),
+                32: (1, 0, 0, 0),
+                33: (1, 0, 0, 0),
+                34: (1, 0, 0, 0),
+                35: (1, 0, 0, 0),
+                36: (1, 0, 0, 0),
+                37: (1, 0, 0, 0),
+                38: (1, 0, 0, 0),
+                39: (1, 0, 0, 0),
+                40: (1, 0, 0, 0),
+                41: (1, 0, 0, 0),
+                42: (1, 0, 0, 0),
+                43: (1, 0, 0, 0),
+                44: (1, 0, 0, 0),
+                45: (1, 0, 0, 0),
+                46: (1, 0, 0, 0),
+                47: (1, 0, 0, 0),
+                48: (1, 0, 0, 0),
+                49: (1, 0, 0, 0),
+                50: (1, 0, 0, 0),
+                51: (1, 0, 0, 0),
+                52: (1, 0, 0, 0),
+                53: (1, 0, 0, 0),
+                54: (1, 0, 0, 0),
+                55: (1, 0, 0, 0),
+                56: (1, 0, 0, 0),
+                57: (1, 0, 0, 0),
+                58: (1, 0, 0, 0),
+                59: (1, 0, 0, 0),
+                60: (1, 0, 0, 0),
+                61: (1, 0, 0, 0),
+                62: (1, 0, 0, 0),
+                63: (1, 0, 0, 0),
+                64: (1, 0, 0, 0),
+                65: (1, 0, 0, 0),
+                66: (1, 0, 0, 0),
+                67: (1, 0, 0, 0),
+                68: (1, 0, 0, 0),
+                69: (1, 0, 0, 0),
+                70: (1, 0, 0, 0),
+                71: (1, 0, 0, 0),
+                72: (1, 0, 0, 0),
+                73: (1, 0, 0, 0),
+                74: (1, 0, 0, 0),
+                75: (1, 0, 0, 0),
+                76: (1, 0, 0, 0),
+                77: (1, 0, 0, 0),
+                78: (1, 0, 0, 0),
+                79: (1, 0, 0, 0),
+                80: (1, 0, 0, 0),
+                81: (1, 0, 0, 0),
+                82: (1, 0, 0, 0),
+                83: (1, 0, 0, 0),
+                84: (1, 0, 0, 0),
+                85: (1, 0, 0, 0),
+                86: (1, 0, 0, 0),
+            }
+            uniform token[] xformOpOrder = ["xformOp:orient"]
+
+            def Xform "forearm_link"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.125)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+
+                def Cylinder "geom"
+                {
+                    uniform token axis = "Z"
+                    double height = 0.25
+                    double radius = 0.04
+
+                    def Shader "surface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (0.9, 0.45, 0.1)
+                        float inputs:metallic = 0
+                        float inputs:opacity = 1
+                        float inputs:roughness = 0.45
+                        token outputs:surface
+                    }
+
+                    def Material "material"
+                    {
+                        token outputs:surface.connect = </arm/upper_arm_link/joint_forearm_roll_joint/forearm_link/geom/surface.outputs:surface>
+                    }
+                }
+            }
+        }
+    }
+
+    def "forearm_link"
+    {
+        def Xform "joint_wrist_1_joint" (
+            "joint=wrist_1_joint type=revolute axis=[0.0, 1.0, 0.0]"
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            quatf xformOp:orient.timeSamples = {
+                0: (1, 0, 0, 0),
+                1: (1, 0, 0, 0),
+                2: (1, 0, 0, 0),
+                3: (1, 0, 0, 0),
+                4: (1, 0, 0, 0),
+                5: (1, 0, 0, 0),
+                6: (1, 0, 0, 0),
+                7: (1, 0, 0, 0),
+                8: (1, 0, 0, 0),
+                9: (1, 0, 0, 0),
+                10: (1, 0, 0, 0),
+                11: (1, 0, 0, 0),
+                12: (1, 0, 0, 0),
+                13: (1, 0, 0, 0),
+                14: (1, 0, 0, 0),
+                15: (1, 0, 0, 0),
+                16: (1, 0, 0, 0),
+                17: (1, 0, 0, 0),
+                18: (1, 0, 0, 0),
+                19: (1, 0, 0, 0),
+                20: (1, 0, 0, 0),
+                21: (1, 0, 0, 0),
+                22: (1, 0, 0, 0),
+                23: (1, 0, 0, 0),
+                24: (1, 0, 0, 0),
+                25: (1, 0, 0, 0),
+                26: (1, 0, 0, 0),
+                27: (1, 0, 0, 0),
+                28: (1, 0, 0, 0),
+                29: (1, 0, 0, 0),
+                30: (1, 0, 0, 0),
+                31: (1, 0, 0, 0),
+                32: (1, 0, 0, 0),
+                33: (1, 0, 0, 0),
+                34: (1, 0, 0, 0),
+                35: (1, 0, 0, 0),
+                36: (1, 0, 0, 0),
+                37: (1, 0, 0, 0),
+                38: (1, 0, 0, 0),
+                39: (1, 0, 0, 0),
+                40: (1, 0, 0, 0),
+                41: (1, 0, 0, 0),
+                42: (1, 0, 0, 0),
+                43: (1, 0, 0, 0),
+                44: (1, 0, 0, 0),
+                45: (1, 0, 0, 0),
+                46: (1, 0, 0, 0),
+                47: (1, 0, 0, 0),
+                48: (1, 0, 0, 0),
+                49: (1, 0, 0, 0),
+                50: (1, 0, 0, 0),
+                51: (1, 0, 0, 0),
+                52: (1, 0, 0, 0),
+                53: (1, 0, 0, 0),
+                54: (1, 0, 0, 0),
+                55: (1, 0, 0, 0),
+                56: (1, 0, 0, 0),
+                57: (1, 0, 0, 0),
+                58: (1, 0, 0, 0),
+                59: (1, 0, 0, 0),
+                60: (1, 0, 0, 0),
+                61: (1, 0, 0, 0),
+                62: (1, 0, 0, 0),
+                63: (1, 0, 0, 0),
+                64: (1, 0, 0, 0),
+                65: (1, 0, 0, 0),
+                66: (1, 0, 0, 0),
+                67: (1, 0, 0, 0),
+                68: (1, 0, 0, 0),
+                69: (1, 0, 0, 0),
+                70: (1, 0, 0, 0),
+                71: (1, 0, 0, 0),
+                72: (1, 0, 0, 0),
+                73: (1, 0, 0, 0),
+                74: (1, 0, 0, 0),
+                75: (1, 0, 0, 0),
+                76: (1, 0, 0, 0),
+                77: (1, 0, 0, 0),
+                78: (1, 0, 0, 0),
+                79: (1, 0, 0, 0),
+                80: (1, 0, 0, 0),
+                81: (1, 0, 0, 0),
+                82: (1, 0, 0, 0),
+                83: (1, 0, 0, 0),
+                84: (1, 0, 0, 0),
+                85: (1, 0, 0, 0),
+                86: (1, 0, 0, 0),
+            }
+            uniform token[] xformOpOrder = ["xformOp:orient"]
+
+            def Xform "wrist_1_link"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.04)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+
+                def Cylinder "geom"
+                {
+                    uniform token axis = "Z"
+                    double height = 0.08
+                    double radius = 0.035
+
+                    def Shader "surface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                        float inputs:metallic = 0
+                        float inputs:opacity = 1
+                        float inputs:roughness = 0.45
+                        token outputs:surface
+                    }
+
+                    def Material "material"
+                    {
+                        token outputs:surface.connect = </arm/forearm_link/joint_wrist_1_joint/wrist_1_link/geom/surface.outputs:surface>
+                    }
+                }
+            }
+        }
+    }
+
+    def "wrist_1_link"
+    {
+        def Xform "joint_wrist_2_joint" (
+            "joint=wrist_2_joint type=revolute axis=[0.0, 0.0, 1.0]"
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            quatf xformOp:orient.timeSamples = {
+                0: (1, 0, 0, 0),
+                1: (1, 0, 0, 0),
+                2: (1, 0, 0, 0),
+                3: (1, 0, 0, 0),
+                4: (1, 0, 0, 0),
+                5: (1, 0, 0, 0),
+                6: (1, 0, 0, 0),
+                7: (1, 0, 0, 0),
+                8: (1, 0, 0, 0),
+                9: (1, 0, 0, 0),
+                10: (1, 0, 0, 0),
+                11: (1, 0, 0, 0),
+                12: (1, 0, 0, 0),
+                13: (1, 0, 0, 0),
+                14: (1, 0, 0, 0),
+                15: (1, 0, 0, 0),
+                16: (1, 0, 0, 0),
+                17: (1, 0, 0, 0),
+                18: (1, 0, 0, 0),
+                19: (1, 0, 0, 0),
+                20: (1, 0, 0, 0),
+                21: (1, 0, 0, 0),
+                22: (1, 0, 0, 0),
+                23: (1, 0, 0, 0),
+                24: (1, 0, 0, 0),
+                25: (1, 0, 0, 0),
+                26: (1, 0, 0, 0),
+                27: (1, 0, 0, 0),
+                28: (1, 0, 0, 0),
+                29: (1, 0, 0, 0),
+                30: (1, 0, 0, 0),
+                31: (1, 0, 0, 0),
+                32: (1, 0, 0, 0),
+                33: (1, 0, 0, 0),
+                34: (1, 0, 0, 0),
+                35: (1, 0, 0, 0),
+                36: (1, 0, 0, 0),
+                37: (1, 0, 0, 0),
+                38: (1, 0, 0, 0),
+                39: (1, 0, 0, 0),
+                40: (1, 0, 0, 0),
+                41: (1, 0, 0, 0),
+                42: (1, 0, 0, 0),
+                43: (1, 0, 0, 0),
+                44: (1, 0, 0, 0),
+                45: (1, 0, 0, 0),
+                46: (1, 0, 0, 0),
+                47: (1, 0, 0, 0),
+                48: (1, 0, 0, 0),
+                49: (1, 0, 0, 0),
+                50: (1, 0, 0, 0),
+                51: (1, 0, 0, 0),
+                52: (1, 0, 0, 0),
+                53: (1, 0, 0, 0),
+                54: (1, 0, 0, 0),
+                55: (1, 0, 0, 0),
+                56: (1, 0, 0, 0),
+                57: (1, 0, 0, 0),
+                58: (1, 0, 0, 0),
+                59: (1, 0, 0, 0),
+                60: (1, 0, 0, 0),
+                61: (1, 0, 0, 0),
+                62: (1, 0, 0, 0),
+                63: (1, 0, 0, 0),
+                64: (1, 0, 0, 0),
+                65: (1, 0, 0, 0),
+                66: (1, 0, 0, 0),
+                67: (1, 0, 0, 0),
+                68: (1, 0, 0, 0),
+                69: (1, 0, 0, 0),
+                70: (1, 0, 0, 0),
+                71: (1, 0, 0, 0),
+                72: (1, 0, 0, 0),
+                73: (1, 0, 0, 0),
+                74: (1, 0, 0, 0),
+                75: (1, 0, 0, 0),
+                76: (1, 0, 0, 0),
+                77: (1, 0, 0, 0),
+                78: (1, 0, 0, 0),
+                79: (1, 0, 0, 0),
+                80: (1, 0, 0, 0),
+                81: (1, 0, 0, 0),
+                82: (1, 0, 0, 0),
+                83: (1, 0, 0, 0),
+                84: (1, 0, 0, 0),
+                85: (1, 0, 0, 0),
+                86: (1, 0, 0, 0),
+            }
+            uniform token[] xformOpOrder = ["xformOp:orient"]
+
+            def Xform "wrist_2_link"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.035)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+
+                def Cylinder "geom"
+                {
+                    uniform token axis = "Z"
+                    double height = 0.07
+                    double radius = 0.03
+
+                    def Shader "surface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                        float inputs:metallic = 0
+                        float inputs:opacity = 1
+                        float inputs:roughness = 0.45
+                        token outputs:surface
+                    }
+
+                    def Material "material"
+                    {
+                        token outputs:surface.connect = </arm/wrist_1_link/joint_wrist_2_joint/wrist_2_link/geom/surface.outputs:surface>
+                    }
+                }
+            }
+        }
+    }
+
+    def "wrist_2_link"
+    {
+        def Xform "joint_wrist_3_joint" (
+            "joint=wrist_3_joint type=revolute axis=[0.0, 0.0, 1.0]"
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            quatf xformOp:orient.timeSamples = {
+                0: (1, 0, 0, 0),
+                1: (1, 0, 0, 0),
+                2: (1, 0, 0, 0),
+                3: (1, 0, 0, 0),
+                4: (1, 0, 0, 0),
+                5: (1, 0, 0, 0),
+                6: (1, 0, 0, 0),
+                7: (1, 0, 0, 0),
+                8: (1, 0, 0, 0),
+                9: (1, 0, 0, 0),
+                10: (1, 0, 0, 0),
+                11: (1, 0, 0, 0),
+                12: (1, 0, 0, 0),
+                13: (1, 0, 0, 0),
+                14: (1, 0, 0, 0),
+                15: (1, 0, 0, 0),
+                16: (1, 0, 0, 0),
+                17: (1, 0, 0, 0),
+                18: (1, 0, 0, 0),
+                19: (1, 0, 0, 0),
+                20: (1, 0, 0, 0),
+                21: (1, 0, 0, 0),
+                22: (1, 0, 0, 0),
+                23: (1, 0, 0, 0),
+                24: (1, 0, 0, 0),
+                25: (1, 0, 0, 0),
+                26: (1, 0, 0, 0),
+                27: (1, 0, 0, 0),
+                28: (1, 0, 0, 0),
+                29: (1, 0, 0, 0),
+                30: (1, 0, 0, 0),
+                31: (1, 0, 0, 0),
+                32: (1, 0, 0, 0),
+                33: (1, 0, 0, 0),
+                34: (1, 0, 0, 0),
+                35: (1, 0, 0, 0),
+                36: (1, 0, 0, 0),
+                37: (1, 0, 0, 0),
+                38: (1, 0, 0, 0),
+                39: (1, 0, 0, 0),
+                40: (1, 0, 0, 0),
+                41: (1, 0, 0, 0),
+                42: (1, 0, 0, 0),
+                43: (1, 0, 0, 0),
+                44: (1, 0, 0, 0),
+                45: (1, 0, 0, 0),
+                46: (1, 0, 0, 0),
+                47: (1, 0, 0, 0),
+                48: (1, 0, 0, 0),
+                49: (1, 0, 0, 0),
+                50: (1, 0, 0, 0),
+                51: (1, 0, 0, 0),
+                52: (1, 0, 0, 0),
+                53: (1, 0, 0, 0),
+                54: (1, 0, 0, 0),
+                55: (1, 0, 0, 0),
+                56: (1, 0, 0, 0),
+                57: (1, 0, 0, 0),
+                58: (1, 0, 0, 0),
+                59: (1, 0, 0, 0),
+                60: (1, 0, 0, 0),
+                61: (1, 0, 0, 0),
+                62: (1, 0, 0, 0),
+                63: (1, 0, 0, 0),
+                64: (1, 0, 0, 0),
+                65: (1, 0, 0, 0),
+                66: (1, 0, 0, 0),
+                67: (1, 0, 0, 0),
+                68: (1, 0, 0, 0),
+                69: (1, 0, 0, 0),
+                70: (1, 0, 0, 0),
+                71: (1, 0, 0, 0),
+                72: (1, 0, 0, 0),
+                73: (1, 0, 0, 0),
+                74: (1, 0, 0, 0),
+                75: (1, 0, 0, 0),
+                76: (1, 0, 0, 0),
+                77: (1, 0, 0, 0),
+                78: (1, 0, 0, 0),
+                79: (1, 0, 0, 0),
+                80: (1, 0, 0, 0),
+                81: (1, 0, 0, 0),
+                82: (1, 0, 0, 0),
+                83: (1, 0, 0, 0),
+                84: (1, 0, 0, 0),
+                85: (1, 0, 0, 0),
+                86: (1, 0, 0, 0),
+            }
+            uniform token[] xformOpOrder = ["xformOp:orient"]
+
+            def Xform "tool_link"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.03)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+
+                def Cube "geom"
+                {
+                    double size = 1
+                    float3 xformOp:scale = (0.05, 0.05, 0.06)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+
+                    def Shader "surface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                        float inputs:metallic = 0
+                        float inputs:opacity = 1
+                        float inputs:roughness = 0.45
+                        token outputs:surface
+                    }
+
+                    def Material "material"
+                    {
+                        token outputs:surface.connect = </arm/wrist_2_link/joint_wrist_3_joint/tool_link/geom/surface.outputs:surface>
+                    }
+                }
+            }
+        }
+    }
+
+    def "tool_link"
+    {
+        def Xform "joint_gripper_joint" (
+            "joint=gripper_joint type=prismatic axis=[1.0, 0.0, 0.0]"
+        )
+        {
+            double3 xformOp:translate.timeSamples = {
+                0: (0, 0, 0.06),
+                1: (0, 0, 0.06),
+                2: (0, 0, 0.06),
+                3: (0, 0, 0.06),
+                4: (0, 0, 0.06),
+                5: (0, 0, 0.06),
+                6: (0, 0, 0.06),
+                7: (0, 0, 0.06),
+                8: (0, 0, 0.06),
+                9: (0, 0, 0.06),
+                10: (0, 0, 0.06),
+                11: (0, 0, 0.06),
+                12: (0, 0, 0.06),
+                13: (0, 0, 0.06),
+                14: (0, 0, 0.06),
+                15: (0, 0, 0.06),
+                16: (0, 0, 0.06),
+                17: (0, 0, 0.06),
+                18: (0, 0, 0.06),
+                19: (0, 0, 0.06),
+                20: (0, 0, 0.06),
+                21: (0, 0, 0.06),
+                22: (0, 0, 0.06),
+                23: (0, 0, 0.06),
+                24: (0, 0, 0.06),
+                25: (0, 0, 0.06),
+                26: (0, 0, 0.06),
+                27: (0, 0, 0.06),
+                28: (0, 0, 0.06),
+                29: (0, 0, 0.06),
+                30: (0, 0, 0.06),
+                31: (0, 0, 0.06),
+                32: (0, 0, 0.06),
+                33: (0, 0, 0.06),
+                34: (0, 0, 0.06),
+                35: (0, 0, 0.06),
+                36: (0, 0, 0.06),
+                37: (0, 0, 0.06),
+                38: (0, 0, 0.06),
+                39: (0, 0, 0.06),
+                40: (0, 0, 0.06),
+                41: (0, 0, 0.06),
+                42: (0, 0, 0.06),
+                43: (0, 0, 0.06),
+                44: (0, 0, 0.06),
+                45: (0, 0, 0.06),
+                46: (0, 0, 0.06),
+                47: (0, 0, 0.06),
+                48: (0, 0, 0.06),
+                49: (0, 0, 0.06),
+                50: (0, 0, 0.06),
+                51: (0, 0, 0.06),
+                52: (0, 0, 0.06),
+                53: (0, 0, 0.06),
+                54: (0, 0, 0.06),
+                55: (0, 0, 0.06),
+                56: (0, 0, 0.06),
+                57: (0, 0, 0.06),
+                58: (0, 0, 0.06),
+                59: (0, 0, 0.06),
+                60: (0, 0, 0.06),
+                61: (0, 0, 0.06),
+                62: (0, 0, 0.06),
+                63: (0, 0, 0.06),
+                64: (0, 0, 0.06),
+                65: (0, 0, 0.06),
+                66: (0, 0, 0.06),
+                67: (0, 0, 0.06),
+                68: (0, 0, 0.06),
+                69: (0, 0, 0.06),
+                70: (0, 0, 0.06),
+                71: (0, 0, 0.06),
+                72: (0, 0, 0.06),
+                73: (0, 0, 0.06),
+                74: (0, 0, 0.06),
+                75: (0, 0, 0.06),
+                76: (0, 0, 0.06),
+                77: (0, 0, 0.06),
+                78: (0, 0, 0.06),
+                79: (0, 0, 0.06),
+                80: (0, 0, 0.06),
+                81: (0, 0, 0.06),
+                82: (0, 0, 0.06),
+                83: (0, 0, 0.06),
+                84: (0, 0, 0.06),
+                85: (0, 0, 0.06),
+                86: (0, 0, 0.06),
+            }
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+
+            def Xform "gripper_link"
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:translate = (0, 0, 0.015)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient"]
+
+                def Cube "geom"
+                {
+                    double size = 1
+                    float3 xformOp:scale = (0.08, 0.05, 0.03)
+                    uniform token[] xformOpOrder = ["xformOp:scale"]
+
+                    def Shader "surface"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                        float inputs:metallic = 0
+                        float inputs:opacity = 1
+                        float inputs:roughness = 0.45
+                        token outputs:surface
+                    }
+
+                    def Material "material"
+                    {
+                        token outputs:surface.connect = </arm/tool_link/joint_gripper_joint/gripper_link/geom/surface.outputs:surface>
+                    }
+                }
+            }
+        }
+    }
+}
+

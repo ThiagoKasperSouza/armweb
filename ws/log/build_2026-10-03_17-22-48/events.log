@@ -1,0 +1,40 @@
+[0.000000] (-) TimerEvent: {}
+[0.000092] (armweb_sim) JobQueued: {'identifier': 'armweb_sim', 'dependencies': OrderedDict()}
+[0.002507] (armweb_sim) JobStarted: {'identifier': 'armweb_sim'}
+[0.099042] (-) TimerEvent: {}
+[0.199310] (-) TimerEvent: {}
+[0.299580] (-) TimerEvent: {}
+[0.399864] (-) TimerEvent: {}
+[0.500083] (-) TimerEvent: {}
+[0.600380] (-) TimerEvent: {}
+[0.642975] (armweb_sim) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/ws/build/armweb_sim/build', '--no-deps', 'symlink_data'], 'cwd': '/ws/build/armweb_sim', 'env': OrderedDict([('RCUTILS_LOGGING_BUFFERED_STREAM', '0'), ('HOSTNAME', 'armweb-sim'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/ws'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('DEBIAN_FRONTEND', 'noninteractive'), ('AMENT_TRACE_SETUP_FILES', '0'), ('GALLIUM_DRIVER', 'llvmpipe'), ('PWD', '/ws/build/armweb_sim'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ws/build/armweb_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/armweb_sim/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1')]), 'shell': False}
+[0.700640] (-) TimerEvent: {}
+[0.800992] (-) TimerEvent: {}
+[0.810651] (armweb_sim) StdoutLine: {'line': b'running develop\n'}
+[0.890296] (armweb_sim) StdoutLine: {'line': b'running egg_info\n'}
+[0.890447] (armweb_sim) StdoutLine: {'line': b'creating armweb_sim.egg-info\n'}
+[0.890734] (armweb_sim) StdoutLine: {'line': b'writing armweb_sim.egg-info/PKG-INFO\n'}
+[0.891031] (armweb_sim) StdoutLine: {'line': b'writing dependency_links to armweb_sim.egg-info/dependency_links.txt\n'}
+[0.891436] (armweb_sim) StdoutLine: {'line': b'writing entry points to armweb_sim.egg-info/entry_points.txt\n'}
+[0.891589] (armweb_sim) StdoutLine: {'line': b'writing requirements to armweb_sim.egg-info/requires.txt\n'}
+[0.891821] (armweb_sim) StdoutLine: {'line': b'writing top-level names to armweb_sim.egg-info/top_level.txt\n'}
+[0.891904] (armweb_sim) StdoutLine: {'line': b"writing manifest file 'armweb_sim.egg-info/SOURCES.txt'\n"}
+[0.893192] (armweb_sim) StdoutLine: {'line': b"reading manifest file 'armweb_sim.egg-info/SOURCES.txt'\n"}
+[0.893766] (armweb_sim) StdoutLine: {'line': b"writing manifest file 'armweb_sim.egg-info/SOURCES.txt'\n"}
+[0.895272] (armweb_sim) StdoutLine: {'line': b'running build_ext\n'}
+[0.895734] (armweb_sim) StdoutLine: {'line': b'Creating /ws/install/armweb_sim/lib/python3.10/site-packages/armweb-sim.egg-link (link to .)\n'}
+[0.896738] (armweb_sim) StdoutLine: {'line': b'Installing arm_sim_node script to /ws/install/armweb_sim/bin\n'}
+[0.897836] (armweb_sim) StdoutLine: {'line': b'\n'}
+[0.898021] (armweb_sim) StdoutLine: {'line': b'Installed /ws/build/armweb_sim\n'}
+[0.898129] (armweb_sim) StdoutLine: {'line': b'running symlink_data\n'}
+[0.898487] (armweb_sim) StdoutLine: {'line': b'creating /ws/install/armweb_sim/share/ament_index\n'}
+[0.898582] (armweb_sim) StdoutLine: {'line': b'creating /ws/install/armweb_sim/share/ament_index/resource_index\n'}
+[0.898887] (armweb_sim) StdoutLine: {'line': b'creating /ws/install/armweb_sim/share/ament_index/resource_index/packages\n'}
+[0.899179] (armweb_sim) StdoutLine: {'line': b'symbolically linking /ws/build/armweb_sim/resource/armweb_sim -> /ws/install/armweb_sim/share/ament_index/resource_index/packages\n'}
+[0.899790] (armweb_sim) StdoutLine: {'line': b'symbolically linking /ws/build/armweb_sim/package.xml -> /ws/install/armweb_sim/share/armweb_sim\n'}
+[0.899928] (armweb_sim) StdoutLine: {'line': b'creating /ws/install/armweb_sim/share/armweb_sim/launch\n'}
+[0.900372] (armweb_sim) StdoutLine: {'line': b'symbolically linking /ws/build/armweb_sim/launch/sim.launch.py -> /ws/install/armweb_sim/share/armweb_sim/launch\n'}
+[0.901102] (-) TimerEvent: {}
+[0.926583] (armweb_sim) CommandEnded: {'returncode': 0}
+[0.940663] (armweb_sim) JobEnded: {'identifier': 'armweb_sim', 'rc': 0}
+[0.941334] (-) EventReactorShutdown: {}

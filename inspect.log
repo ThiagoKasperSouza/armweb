@@ -1,0 +1,33 @@
+=== full recent sim logs (non-setup lines) ===
+armweb_sim  | [entrypoint] launching armweb sim (ARM=demo)
+armweb_sim  | [INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-03-17-31-29-799630-armweb-sim-1
+armweb_sim  | [INFO] [launch]: Default logging verbosity is set to INFO
+armweb_sim  | [INFO] [python3-1]: process started with pid [30]
+armweb_sim  | [python3-1] [export_usd] wrote /ws/data/usd/arm.usda
+armweb_sim  | [python3-1] [export_usd] robot=demo_arm joints=7 prims=54
+armweb_sim  | [INFO] [python3-1]: process has finished cleanly [pid 30]
+armweb_sim  | [INFO] [robot_state_publisher-2]: process started with pid [40]
+armweb_sim  | [INFO] [python3-3]: process started with pid [42]
+armweb_sim  | [INFO] [foxglove_bridge-4]: process started with pid [44]
+armweb_sim  | [robot_state_publisher-2] [WARN] [1791048691.883948624] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+armweb_sim  | [robot_state_publisher-2] [INFO] [1791048691.884088134] [robot_state_publisher]: got segment base_link
+armweb_sim  | [robot_state_publisher-2] [INFO] [1791048691.884177669] [robot_state_publisher]: got segment forearm_link
+armweb_sim  | [robot_state_publisher-2] [INFO] [1791048691.884188461] [robot_state_publisher]: got segment gripper_link
+armweb_sim  | [robot_state_publisher-2] [INFO] [1791048691.884193901] [robot_state_publisher]: got segment shoulder_link
+armweb_sim  | [robot_state_publisher-2] [INFO] [1791048691.884199119] [robot_state_publisher]: got segment tool_link
+armweb_sim  | [robot_state_publisher-2] [INFO] [1791048691.884204371] [robot_state_publisher]: got segment upper_arm_link
+armweb_sim  | [robot_state_publisher-2] [INFO] [1791048691.884209590] [robot_state_publisher]: got segment wrist_1_link
+armweb_sim  | [robot_state_publisher-2] [INFO] [1791048691.884214494] [robot_state_publisher]: got segment wrist_2_link
+armweb_sim  | [foxglove_bridge-4] [INFO] [1791048691.901134192] [foxglove_bridge]: Starting foxglove_bridge (humble, 3.5.0@)
+armweb_sim  | [foxglove_bridge-4] [2026-10-03T17:31:31Z INFO  foxglove::websocket::server] Started server on 0.0.0.0:8765
+armweb_sim  | [foxglove_bridge-4] [INFO] [1791048691.903206290] [foxglove_bridge]: Server listening on port 8765
+armweb_sim  | [foxglove_bridge-4] [INFO] [1791048691.906823650] [foxglove_bridge]: Advertising new channel 2 for topic "/tf"
+armweb_sim  | [foxglove_bridge-4] [INFO] [1791048691.906975947] [foxglove_bridge]: Advertising new channel 3 for topic "/rosout"
+armweb_sim  | [foxglove_bridge-4] [INFO] [1791048691.907147436] [foxglove_bridge]: Advertising new channel 4 for topic "/parameter_events"
+armweb_sim  | [foxglove_bridge-4] [INFO] [1791048691.907155382] [foxglove_bridge]: Advertising new channel 5 for topic "/tf_static"
+armweb_sim  | [foxglove_bridge-4] [INFO] [1791048691.907684529] [foxglove_bridge]: Advertising new channel 6 for topic "/joint_states"
+armweb_sim  | [foxglove_bridge-4] [INFO] [1791048691.908039742] [foxglove_bridge]: Advertising new channel 7 for topic "/arm/robot_description"
+armweb_sim  | [python3-3] [INFO] [1791048692.222513719] [arm_sim]: arm_sim up: 7 joints @ 50.0 Hz
+armweb_sim  | [foxglove_bridge-4] [INFO] [1791048692.410609243] [foxglove_bridge]: Advertising new channel 8 for topic "/arm_sim/joint_positions"
+armweb_sim  | [foxglove_bridge-4] [INFO] [1791048692.410738613] [foxglove_bridge]: Advertising new channel 9 for topic "/arm_sim/arm/command"
+=== DONE ===

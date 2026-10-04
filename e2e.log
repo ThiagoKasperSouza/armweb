@@ -1,0 +1,77 @@
+=== container status ===
+NAME         IMAGE           COMMAND                  SERVICE   CREATED              STATUS                                 PORTS
+armweb_sim   armweb:latest   "/ros_entrypoint.sh …"   sim       About a minute ago   Up About a minute (health: starting)   0.0.0.0:8765->8765/tcp, [::]:8765->8765/tcp
+=== /joint_states (live, 1 sample) ===
+- wrist_3_joint
+- gripper_joint
+position:
+- 0.0
+- 0.4
+- 0.0
+- 0.8
+- 0.0
+- 0.0
+- 0.0
+velocity:
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+effort: []
+---
+=== send a command, verify motion ===
+  stamp:
+    sec: 1791048802
+    nanosec: 290849570
+  frame_id: ''
+name:
+- shoulder_pan_joint
+- elbow_pitch_joint
+- forearm_roll_joint
+- wrist_1_joint
+- wrist_2_joint
+- wrist_3_joint
+- gripper_joint
+position:
+- 0.9999999999992486
+- -0.4999999999993238
+- 0.29999999999977467
+- 1.1999999999996995
+- 0.0
+- 0.4999999999996243
+- 0.03999999999996994
+velocity:
+- -6.281016615460758e-12
+- 5.653366032334809e-12
+- -1.884831622889826e-12
+- -2.5127029009989446e-12
+- 0.0
+- -3.140508307730379e-12
+- -2.512383940579467e-13
+effort: []
+---
+=== TF tree (frames) ===
+  child_frame_id: tool_link
+  transform:
+    translation:
+      x: 0.0
+      y: 0.0
+      z: 0.07
+    rotation:
+      x: 0.0
+      y: 0.0
+      z: 0.24740395925452296
+      w: 0.968912421710645
+---
+=== USD artifact ===
+total 20
+drwxr-xr-x 2 root root 4096 Oct  3 14:31 .
+drwxr-xr-x 3 root root 4096 Oct  3 14:18 ..
+-rw-r--r-- 1 root root 9947 Oct  3 14:31 arm.usda
+=== host port check ===
+foxglove 8765 http code: 000
+no http (expected: websocket only)
+=== DONE ===

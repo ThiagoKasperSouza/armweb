@@ -1,0 +1,339 @@
+#usda 1.0
+(
+    "Converted from URDF 'demo_arm' (/ws/assets/urdf/demo_arm.urdf)"
+    defaultPrim = "arm"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "arm"
+{
+    def Xform "base_link_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0.05)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+        def Cube "geom"
+        {
+            double size = 1
+            float3 xformOp:scale = (0.3, 0.3, 0.1)
+            uniform token[] xformOpOrder = ["xformOp:scale"]
+
+            def Shader "surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                float inputs:roughness = 0.5
+                token outputs:surface
+            }
+
+            def Material "material"
+            {
+                token outputs:surface.connect = </arm/base_link_visual/geom/surface.outputs:surface>
+            }
+        }
+    }
+
+    def Xform "shoulder_link_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0.06)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+        def Cylinder "geom"
+        {
+            uniform token axis = "Z"
+            double height = 0.12
+            double radius = 0.055
+
+            def Shader "surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.9, 0.45, 0.1)
+                float inputs:roughness = 0.5
+                token outputs:surface
+            }
+
+            def Material "material"
+            {
+                token outputs:surface.connect = </arm/shoulder_link_visual/geom/surface.outputs:surface>
+            }
+        }
+    }
+
+    def Xform "upper_arm_link_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0.15)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+        def Cube "geom"
+        {
+            double size = 1
+            float3 xformOp:scale = (0.06, 0.06, 0.3)
+            uniform token[] xformOpOrder = ["xformOp:scale"]
+
+            def Shader "surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.9, 0.45, 0.1)
+                float inputs:roughness = 0.5
+                token outputs:surface
+            }
+
+            def Material "material"
+            {
+                token outputs:surface.connect = </arm/upper_arm_link_visual/geom/surface.outputs:surface>
+            }
+        }
+    }
+
+    def Xform "forearm_link_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0.125)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+        def Cylinder "geom"
+        {
+            uniform token axis = "Z"
+            double height = 0.25
+            double radius = 0.04
+
+            def Shader "surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.9, 0.45, 0.1)
+                float inputs:roughness = 0.5
+                token outputs:surface
+            }
+
+            def Material "material"
+            {
+                token outputs:surface.connect = </arm/forearm_link_visual/geom/surface.outputs:surface>
+            }
+        }
+    }
+
+    def Xform "wrist_1_link_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0.04)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+        def Cylinder "geom"
+        {
+            uniform token axis = "Z"
+            double height = 0.08
+            double radius = 0.035
+
+            def Shader "surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                float inputs:roughness = 0.5
+                token outputs:surface
+            }
+
+            def Material "material"
+            {
+                token outputs:surface.connect = </arm/wrist_1_link_visual/geom/surface.outputs:surface>
+            }
+        }
+    }
+
+    def Xform "wrist_2_link_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0.035)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+        def Cylinder "geom"
+        {
+            uniform token axis = "Z"
+            double height = 0.07
+            double radius = 0.03
+
+            def Shader "surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                float inputs:roughness = 0.5
+                token outputs:surface
+            }
+
+            def Material "material"
+            {
+                token outputs:surface.connect = </arm/wrist_2_link_visual/geom/surface.outputs:surface>
+            }
+        }
+    }
+
+    def Xform "tool_link_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0.03)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+        def Cube "geom"
+        {
+            double size = 1
+            float3 xformOp:scale = (0.05, 0.05, 0.06)
+            uniform token[] xformOpOrder = ["xformOp:scale"]
+
+            def Shader "surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                float inputs:roughness = 0.5
+                token outputs:surface
+            }
+
+            def Material "material"
+            {
+                token outputs:surface.connect = </arm/tool_link_visual/geom/surface.outputs:surface>
+            }
+        }
+    }
+
+    def Xform "gripper_link_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0.015)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+        def Cube "geom"
+        {
+            double size = 1
+            float3 xformOp:scale = (0.08, 0.05, 0.03)
+            uniform token[] xformOpOrder = ["xformOp:scale"]
+
+            def Shader "surface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.55, 0.57, 0.6)
+                float inputs:roughness = 0.5
+                token outputs:surface
+            }
+
+            def Material "material"
+            {
+                token outputs:surface.connect = </arm/gripper_link_visual/geom/surface.outputs:surface>
+            }
+        }
+    }
+
+    def "base_link"
+    {
+        def Xform "joint_shoulder_pan_joint" (
+            "joint=shoulder_pan_joint type=revolute axis=0 0 1 lower=-3.14 upper=3.14"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.1)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "shoulder_link"
+            {
+            }
+        }
+    }
+
+    def "shoulder_link"
+    {
+        def Xform "joint_elbow_pitch_joint" (
+            "joint=elbow_pitch_joint type=revolute axis=0 1 0 lower=-2.0 upper=2.0"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.12)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "upper_arm_link"
+            {
+            }
+        }
+    }
+
+    def "upper_arm_link"
+    {
+        def Xform "joint_forearm_roll_joint" (
+            "joint=forearm_roll_joint type=revolute axis=0 0 1 lower=-3.14 upper=3.14"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.3)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "forearm_link"
+            {
+            }
+        }
+    }
+
+    def "forearm_link"
+    {
+        def Xform "joint_wrist_1_joint" (
+            "joint=wrist_1_joint type=revolute axis=0 1 0 lower=-2.5 upper=2.5"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.25)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "wrist_1_link"
+            {
+            }
+        }
+    }
+
+    def "wrist_1_link"
+    {
+        def Xform "joint_wrist_2_joint" (
+            "joint=wrist_2_joint type=revolute axis=0 0 1 lower=-2.5 upper=2.5"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.08)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "wrist_2_link"
+            {
+            }
+        }
+    }
+
+    def "wrist_2_link"
+    {
+        def Xform "joint_wrist_3_joint" (
+            "joint=wrist_3_joint type=revolute axis=0 0 1 lower=-3.14 upper=3.14"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.07)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "tool_link"
+            {
+            }
+        }
+    }
+
+    def "tool_link"
+    {
+        def Xform "joint_gripper_joint" (
+            "joint=gripper_joint type=prismatic axis=1 0 0 lower=0.0 upper=0.04"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.06)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "gripper_link"
+            {
+            }
+        }
+    }
+}
+

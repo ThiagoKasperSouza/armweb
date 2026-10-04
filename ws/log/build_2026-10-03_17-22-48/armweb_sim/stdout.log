@@ -1,0 +1,24 @@
+running develop
+running egg_info
+creating armweb_sim.egg-info
+writing armweb_sim.egg-info/PKG-INFO
+writing dependency_links to armweb_sim.egg-info/dependency_links.txt
+writing entry points to armweb_sim.egg-info/entry_points.txt
+writing requirements to armweb_sim.egg-info/requires.txt
+writing top-level names to armweb_sim.egg-info/top_level.txt
+writing manifest file 'armweb_sim.egg-info/SOURCES.txt'
+reading manifest file 'armweb_sim.egg-info/SOURCES.txt'
+writing manifest file 'armweb_sim.egg-info/SOURCES.txt'
+running build_ext
+Creating /ws/install/armweb_sim/lib/python3.10/site-packages/armweb-sim.egg-link (link to .)
+Installing arm_sim_node script to /ws/install/armweb_sim/bin
+
+Installed /ws/build/armweb_sim
+running symlink_data
+creating /ws/install/armweb_sim/share/ament_index
+creating /ws/install/armweb_sim/share/ament_index/resource_index
+creating /ws/install/armweb_sim/share/ament_index/resource_index/packages
+symbolically linking /ws/build/armweb_sim/resource/armweb_sim -> /ws/install/armweb_sim/share/ament_index/resource_index/packages
+symbolically linking /ws/build/armweb_sim/package.xml -> /ws/install/armweb_sim/share/armweb_sim
+creating /ws/install/armweb_sim/share/armweb_sim/launch
+symbolically linking /ws/build/armweb_sim/launch/sim.launch.py -> /ws/install/armweb_sim/share/armweb_sim/launch

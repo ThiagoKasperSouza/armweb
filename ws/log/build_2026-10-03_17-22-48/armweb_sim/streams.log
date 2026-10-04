@@ -1,0 +1,26 @@
+[0.642s] Invoking command in '/ws/build/armweb_sim': PYTHONPATH=/ws/build/armweb_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/armweb_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /ws/build/armweb_sim/build --no-deps symlink_data
+[0.808s] running develop
+[0.888s] running egg_info
+[0.888s] creating armweb_sim.egg-info
+[0.888s] writing armweb_sim.egg-info/PKG-INFO
+[0.889s] writing dependency_links to armweb_sim.egg-info/dependency_links.txt
+[0.889s] writing entry points to armweb_sim.egg-info/entry_points.txt
+[0.889s] writing requirements to armweb_sim.egg-info/requires.txt
+[0.889s] writing top-level names to armweb_sim.egg-info/top_level.txt
+[0.889s] writing manifest file 'armweb_sim.egg-info/SOURCES.txt'
+[0.891s] reading manifest file 'armweb_sim.egg-info/SOURCES.txt'
+[0.891s] writing manifest file 'armweb_sim.egg-info/SOURCES.txt'
+[0.893s] running build_ext
+[0.893s] Creating /ws/install/armweb_sim/lib/python3.10/site-packages/armweb-sim.egg-link (link to .)
+[0.894s] Installing arm_sim_node script to /ws/install/armweb_sim/bin
+[0.895s] 
+[0.896s] Installed /ws/build/armweb_sim
+[0.896s] running symlink_data
+[0.896s] creating /ws/install/armweb_sim/share/ament_index
+[0.896s] creating /ws/install/armweb_sim/share/ament_index/resource_index
+[0.896s] creating /ws/install/armweb_sim/share/ament_index/resource_index/packages
+[0.897s] symbolically linking /ws/build/armweb_sim/resource/armweb_sim -> /ws/install/armweb_sim/share/ament_index/resource_index/packages
+[0.897s] symbolically linking /ws/build/armweb_sim/package.xml -> /ws/install/armweb_sim/share/armweb_sim
+[0.897s] creating /ws/install/armweb_sim/share/armweb_sim/launch
+[0.898s] symbolically linking /ws/build/armweb_sim/launch/sim.launch.py -> /ws/install/armweb_sim/share/armweb_sim/launch
+[0.924s] Invoked command in '/ws/build/armweb_sim' returned '0': PYTHONPATH=/ws/build/armweb_sim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/armweb_sim/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /ws/build/armweb_sim/build --no-deps symlink_data

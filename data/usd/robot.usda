@@ -1,0 +1,290 @@
+#usda 1.0
+(
+    "Converted from URDF 'fr3' (/ws/assets/urdf/robot.urdf)"
+    defaultPrim = "robot"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "robot"
+{
+    def Xform "fr3_link0_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def Xform "fr3_link1_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def Xform "fr3_link2_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def Xform "fr3_link3_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def Xform "fr3_link4_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def Xform "fr3_link5_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def Xform "fr3_link6_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def Xform "fr3_link7_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def Xform "fr3_hand_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def Xform "fr3_leftfinger_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def Xform "fr3_rightfinger_visual"
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+    }
+
+    def "base"
+    {
+        def Xform "joint_fr3_base_joint" (
+            "joint=fr3_base_joint type=fixed"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_link0"
+            {
+            }
+        }
+    }
+
+    def "fr3_link0"
+    {
+        def Xform "joint_fr3_joint1" (
+            "joint=fr3_joint1 type=revolute axis=0 0 1 lower=-2.7437 upper=2.7437"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.333)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_link1"
+            {
+            }
+        }
+    }
+
+    def "fr3_link1"
+    {
+        def Xform "joint_fr3_joint2" (
+            "joint=fr3_joint2 type=revolute axis=0 0 1 lower=-1.7837 upper=1.7837"
+        )
+        {
+            float3 xformOp:rotateXYZ = (-90, 0, 0)
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_link2"
+            {
+            }
+        }
+    }
+
+    def "fr3_link2"
+    {
+        def Xform "joint_fr3_joint3" (
+            "joint=fr3_joint3 type=revolute axis=0 0 1 lower=-2.9007 upper=2.9007"
+        )
+        {
+            float3 xformOp:rotateXYZ = (90, 0, 0)
+            double3 xformOp:translate = (0, -0.316, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_link3"
+            {
+            }
+        }
+    }
+
+    def "fr3_link3"
+    {
+        def Xform "joint_fr3_joint4" (
+            "joint=fr3_joint4 type=revolute axis=0 0 1 lower=-3.0421 upper=-0.1518"
+        )
+        {
+            float3 xformOp:rotateXYZ = (90, 0, 0)
+            double3 xformOp:translate = (0.0825, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_link4"
+            {
+            }
+        }
+    }
+
+    def "fr3_link4"
+    {
+        def Xform "joint_fr3_joint5" (
+            "joint=fr3_joint5 type=revolute axis=0 0 1 lower=-2.8065 upper=2.8065"
+        )
+        {
+            float3 xformOp:rotateXYZ = (-90, 0, 0)
+            double3 xformOp:translate = (-0.0825, 0.384, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_link5"
+            {
+            }
+        }
+    }
+
+    def "fr3_link5"
+    {
+        def Xform "joint_fr3_joint6" (
+            "joint=fr3_joint6 type=revolute axis=0 0 1 lower=0.5445 upper=4.5169"
+        )
+        {
+            float3 xformOp:rotateXYZ = (90, 0, 0)
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_link6"
+            {
+            }
+        }
+    }
+
+    def "fr3_link6"
+    {
+        def Xform "joint_fr3_joint7" (
+            "joint=fr3_joint7 type=revolute axis=0 0 1 lower=-3.0159 upper=3.0159"
+        )
+        {
+            float3 xformOp:rotateXYZ = (90, 0, 0)
+            double3 xformOp:translate = (0.088, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_link7"
+            {
+            }
+        }
+    }
+
+    def "fr3_link7"
+    {
+        def Xform "joint_fr3_joint8" (
+            "joint=fr3_joint8 type=fixed"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.107)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_link8"
+            {
+            }
+        }
+    }
+
+    def "fr3_link8"
+    {
+        def Xform "joint_fr3_hand_joint" (
+            "joint=fr3_hand_joint type=fixed"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, -45)
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_hand"
+            {
+            }
+        }
+    }
+
+    def "fr3_hand"
+    {
+        def Xform "joint_fr3_hand_tcp_joint" (
+            "joint=fr3_hand_tcp_joint type=fixed"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.1034)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_hand_tcp"
+            {
+            }
+        }
+
+        def Xform "joint_fr3_finger_joint1" (
+            "joint=fr3_finger_joint1 type=prismatic axis=0 1 0 lower=0.0 upper=0.04"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            double3 xformOp:translate = (0, 0, 0.0584)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_leftfinger"
+            {
+            }
+        }
+
+        def Xform "joint_fr3_finger_joint2" (
+            "joint=fr3_finger_joint2 type=prismatic axis=0 1 0 lower=0.0 upper=0.04"
+        )
+        {
+            float3 xformOp:rotateXYZ = (0, 0, 180)
+            double3 xformOp:translate = (0, 0, 0.0584)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+            def Xform "fr3_rightfinger"
+            {
+            }
+        }
+    }
+}
+
