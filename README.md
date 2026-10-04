@@ -1,5 +1,8 @@
 # armweb — simulação de braço robótico com ROS 2 + OpenUSD, headless e sem GPU
 
+<img width="910" height="404" alt="image" src="https://github.com/user-attachments/assets/f3f9bbee-3ae3-4695-999e-9909489988e1" />
+
+
 Infraestrutura completa em Docker/WSL para simular um braço robótico de 6 GDL,
 exportar o modelo em **OpenUSD** e visualizar tudo **pelo navegador**.
 
